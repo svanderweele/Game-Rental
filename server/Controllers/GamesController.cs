@@ -8,7 +8,7 @@ namespace server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GamesController : Controller
+    public class GamesController : ControllerBase
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
@@ -19,7 +19,7 @@ namespace server.Controllers
             _context = context;
         }
 
-        [HttpGet("")]
+        [HttpGet]
         public async Task<IActionResult> ListGames()
         {
             var games = _context.Games.Include(e => e.Publisher);
