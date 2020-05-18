@@ -10,10 +10,10 @@ namespace server.Controllers
     [ApiController]
     public class GamesController : ControllerBase
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<GamesController> _logger;
         private readonly ApplicationDbContext _context;
 
-        public GamesController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public GamesController(ILogger<GamesController> logger, ApplicationDbContext context)
         {
             _logger = logger;
             _context = context;
@@ -23,9 +23,30 @@ namespace server.Controllers
         public async Task<IActionResult> ListGames()
         {
             var games = _context.Games.Include(e => e.Publisher);
-
+            _logger.LogInformation(MyLogEvents.GetItem, "Get List of Games {0}", games);
             return Ok(await games.ToListAsync());
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetGameById([FromRoute] int id)
+        {
+            var game = await _context.Games.Include(e => e.Publisher).FirstOrDefaultAsync(e => e.Id == id);
+            _logger.LogInformation(MyLogEvents.GetItem, "Get List of Games {0}", game);
+            return Ok(new {
+                Id = game.Id,
+                Name = game.Name,
+                Description = game.Description,
+                Publisher = game.Publisher
+            });
+        }
+
+        // [HttpPost]
+        // public async Task<IActionResult> PostGame()
+        // {
+        //     var games = _context.Games.Include(e => e.Publisher);
+        //     _logger.LogInformation(MyLogEvents.GetItem, "Get List of Games {0}", games);
+        //     return Ok(await games.ToListAsync());
+        // }
 
     }
 }
