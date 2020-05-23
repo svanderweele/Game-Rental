@@ -36,12 +36,15 @@ namespace server.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("PublisherId")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("Ref")
+                    b.Property<string>("Ref")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -52,6 +55,30 @@ namespace server.Migrations
                     b.HasIndex("PublisherId");
 
                     b.ToTable("Games");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Uncharted: Drake's Fortune is a 2007 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. It is the first game in the Uncharted series, and was released in November 2007 for PlayStation 3. Combining action-adventure and platforming elements with a third-person perspective, the game follows Nathan Drake, the supposed descendant of the explorer Sir Francis Drake, as he seeks the lost treasure of El Dorado, with the help of journalist Elena Fisher and mentor Victor Sullivan.[1]",
+                            ImageUrl = "https://en.wikipedia.org/wiki/Uncharted:_Drake%27s_Fortune#/media/File:Uncharted_Drake's_Fortune.jpg",
+                            Name = "Uncharted: Drake's Fortune",
+                            PublisherId = 1,
+                            Ref = new Guid("f0e3db49-07ca-4946-8d58-3dd331685163"),
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Uncharted 2: Among Thieves is a 2009 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. It is the second game in the Uncharted series, and was released in October 2009 for PlayStation 3. Set two years after the events of Drake's Fortune, the single-player story follows Nathan Drake, who partners with Chloe Frazer and Elena Fisher, as they search for the Cintamani Stone and Shambhala, whilst battling a mercenary group led by Zoran Lazarević and Harry Flynn.",
+                            ImageUrl = "https://en.wikipedia.org/wiki/Uncharted:_Drake%27s_Fortune#/media/File:Uncharted_Drake's_Fortune.jpg",
+                            Name = "Uncharted 2: Among Thieves",
+                            PublisherId = 1,
+                            Ref = new Guid("f89d7e4e-1d7b-4e72-8f3d-d7908dda22fb"),
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("GameRentalApi.Models.PublisherModel", b =>
@@ -63,12 +90,34 @@ namespace server.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<Guid>("Ref")
+                    b.Property<string>("Ref")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Publishers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Sony Interactive Entertainment",
+                            Ref = new Guid("fe826750-70bf-4673-81dc-67733c33fdda")
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Capcom",
+                            Ref = new Guid("02cf993e-eaf7-424b-8599-696f795bb9d9")
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Name = "Test",
+                            Ref = new Guid("6ccde7a2-d563-40de-b39b-30044c891cc5")
+                        });
                 });
 
             modelBuilder.Entity("GameRentalApi.Models.GameModel", b =>

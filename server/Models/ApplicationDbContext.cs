@@ -57,6 +57,12 @@ namespace GameRentalApi.Models
             }
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            DatabaseSeeder.Seed(this, modelBuilder);
+        }
+
 
 
         public DbSet<GameModel> Games { get; set; }
