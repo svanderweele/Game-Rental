@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>Vue App bundled with Parcels {{message}}</h1>
-    <b-alert show>Welcome Alert</b-alert>
+    <b-container>
+      <h1>Vue App bundled with Parcels {{message}}</h1>
+      <b-alert show>Welcome Alert</b-alert>
+    </b-container>
   </div>
 </template>
 
@@ -13,9 +15,9 @@ export default {
       message: "testing data"
     };
   },
-  created(){
-      fetch('https://localhost:5001/api/games/');
-      console.log('created');
+  created() {
+    fetch("https://localhost:5001/api/games/");
+    console.log("created");
   }
 };
 </script>
