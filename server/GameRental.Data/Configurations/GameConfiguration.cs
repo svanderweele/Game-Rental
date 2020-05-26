@@ -41,6 +41,8 @@ namespace GameRental.Data.Configurations
             .WithMany(m => m.Games)
             .HasForeignKey(m => m.PublisherId);
 
+            builder.HasMany(m => m.Genres);
+
             builder
             .ToTable("Games");
         }

@@ -23,6 +23,10 @@ namespace GameRental.Data
                 .ApplyConfiguration(new GameConfiguration());
             builder
                 .ApplyConfiguration(new PublisherConfiguration());
+            builder
+                .ApplyConfiguration(new GameGenreConfiguration());
+            builder
+                .ApplyConfiguration(new GameGenrePivotConfiguration());
 
             var seeder = new SeedConfiguration();
             seeder.Seed(builder);

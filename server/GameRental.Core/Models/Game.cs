@@ -1,18 +1,8 @@
 using System;
+using System.Collections.Generic;
 
 namespace GameRental.Core.Models
 {
-    public enum GameGenre
-    {
-        ActionAdventure,
-        Platformer,
-        ThirdPersonShooter,
-        FirstPersonShooter,
-        Arcade,
-        Horror,
-        Survival
-    }
-
     public class Game : IReferable, ISoftDeletes
     {
         public int Id { get; set; }
@@ -20,7 +10,7 @@ namespace GameRental.Core.Models
         public string Description { get; set; }
         public string CoverArtUrl { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public GameGenre[] Genres;
+        public ICollection<GameGenrePivot> Genres{get;set;}
 
         public int PublisherId { get; set; }
         public Publisher Publisher { get; set; }

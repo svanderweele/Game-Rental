@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <ItemGroup>
-    <ProjectReference Include="..\GameRental.Core\GameRental.Core.csproj" />
-    <ProjectReference Include="..\GameRental.Services\GameRental.Services.csproj" />
-    <ProjectReference Include="..\GameRental.Data\GameRental.Data.csproj" />
+    <ProjectReference Include="..\GameRental.Core\GameRental.Core.csproj"/>
+    <ProjectReference Include="..\GameRental.Services\GameRental.Services.csproj"/>
+    <ProjectReference Include="..\GameRental.Data\GameRental.Data.csproj"/>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1"/>
+    <PackageReference Include="AutoMapper" Version="9.0.0"/>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.4"/>
+  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
-
 </Project>

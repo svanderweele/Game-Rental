@@ -11,8 +11,8 @@ namespace GameRental.Data
         private GameRepository _gameRepository;
         private PublisherRepository _publisherRepository;
 
-        public IGameRepository GameRepository => _gameRepository = _gameRepository ?? new GameRepository(_context);
-        public IPublisherRepository PublisherRepository => _publisherRepository = _publisherRepository ?? new PublisherRepository(_context);
+        public IGameRepository Games => _gameRepository = _gameRepository ?? new GameRepository(_context);
+        public IPublisherRepository Publishers => _publisherRepository = _publisherRepository ?? new PublisherRepository(_context);
         
         public UnitOfWork(GameRentalDbContext context)
         {

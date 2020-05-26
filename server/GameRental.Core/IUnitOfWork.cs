@@ -1,10 +1,12 @@
 using System.Threading.Tasks;
 using GameRental.Core.Repositories;
 
-namespace GameRental.Core{
+namespace GameRental.Core
+{
     public interface IUnitOfWork
     {
-        IGameRepository GameRepository{get;}
-        Task<int> CommitAsync();   
+        IGameRepository Games { get; }
+        IPublisherRepository Publishers { get; }
+        Task<int> CommitAsync();
     }
 }
