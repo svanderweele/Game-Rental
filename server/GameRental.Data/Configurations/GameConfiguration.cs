@@ -17,6 +17,25 @@ namespace GameRental.Data.Configurations
             .IsRequired()
             .HasMaxLength(100);
 
+            builder
+                .Property(m => m.Ref)
+                .ValueGeneratedOnAdd();
+
+            builder
+                .Property(m => m.CreatedAt)
+                .HasColumnType("datetime(0)");
+
+            builder
+                .Property(m => m.DeletedAt)
+                .HasColumnType("datetime(0)");
+
+            builder
+                .Property(m => m.UpdatedAt)
+                .HasColumnType("datetime(0)");
+
+            builder
+                .Property(m => m.ReleaseDate)
+                .HasColumnType("datetime(0)");
 
             builder.HasOne(m => m.Publisher)
             .WithMany(m => m.Games)

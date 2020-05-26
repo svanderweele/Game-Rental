@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RrjUGZtv3kx1LyUlISoazm02PSfdrFLN+hJJr3iHooldKAr6wOg6HI778lhtLXcFWfLK95u1p+ZynTEXVxVJGg==",
+  "dgSpecHash": "tanMs+yG5GKyprvo3+QAnMlA5yi2ptygsRBpHEansud/At8kywI1PPW7B55sD2VFRrnkG0sYbfso2bMndTpowg==",
   "success": true,
-  "projectFilePath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Api/GameRental.Api.csproj",
+  "projectFilePath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Api/GameRental.Api.csproj",
   "expectedPackageFiles": [
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

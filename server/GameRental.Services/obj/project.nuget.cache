@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4WmEqGKRvEOC4Ve0pl86j5VKKSQZvBEO5zG2fygyrNDUZ9I98y94VmRmnkhVnV9IkF7rYSHi23U1zE25H8Tnwg==",
+  "dgSpecHash": "eDLs2wabzCZ5tHtEgNsevgk2TTVGx6JeFjcY+dqKAj1uFyPJIqn8m3OOkHy0rkbmnEtkWOAwpkJSc+EtLNPOUA==",
   "success": true,
-  "projectFilePath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Services/GameRental.Services.csproj",
+  "projectFilePath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Services/GameRental.Services.csproj",
   "expectedPackageFiles": [
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",

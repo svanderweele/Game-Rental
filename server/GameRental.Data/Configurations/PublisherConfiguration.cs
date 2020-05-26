@@ -19,6 +19,18 @@ namespace GameRental.Data.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
 
+            builder
+                .Property(m => m.CreatedAt)
+                .HasColumnType("datetime(0)");
+
+            builder
+                .Property(m => m.DeletedAt)
+                .HasColumnType("datetime(0)");
+
+            builder
+                .Property(m => m.UpdatedAt)
+                .HasColumnType("datetime(0)");
+
 
             //CHECK :: Do we need this since it is defined in GameConfiguration.cs?
             // builder.HasMany(m => m.Games)

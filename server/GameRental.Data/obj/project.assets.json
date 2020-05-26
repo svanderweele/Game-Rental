@@ -1331,11 +1331,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Data/GameRental.Data.csproj",
+      "projectUniqueName": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Data/GameRental.Data.csproj",
       "projectName": "GameRental.Data",
-      "projectPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Data/GameRental.Data.csproj",
+      "projectPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Data/GameRental.Data.csproj",
       "packagesPath": "/Users/simonvanderweelepersonal/.nuget/packages/",
-      "outputPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Data/obj/",
+      "outputPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Data/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -1352,8 +1352,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Core/GameRental.Core.csproj": {
-              "projectPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/GameRental.Core/GameRental.Core.csproj"
+            "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Core/GameRental.Core.csproj": {
+              "projectPath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Core/GameRental.Core.csproj"
             }
           }
         }
