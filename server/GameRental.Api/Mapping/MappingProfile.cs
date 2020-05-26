@@ -11,10 +11,14 @@ namespace GameRental.Api.Mapping
             // Domain to Resource
             CreateMap<Game, GameResource>();
             CreateMap<Publisher, PublisherResource>();
+            CreateMap<GameGenrePivot, GameGenrePivotResource>();
+            CreateMap<Game, SaveGameResource>();
             
             // Resource to Domain
             CreateMap<GameResource, Game>();
             CreateMap<PublisherResource, Publisher>();
+            CreateMap<GameGenrePivotResource, GameGenrePivot>();
+            CreateMap<SaveGameResource, Game>();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace GameRental.Data.Repositories
         {
             return await GameRentalDbContext.Games
                 .Include(m => m.Genres)
+                .ThenInclude(m => m.Genre)
                 .Include(e => e.Publisher)
                 .ToListAsync();
         }
@@ -31,6 +32,7 @@ namespace GameRental.Data.Repositories
         {
             return await GameRentalDbContext.Games
                 .Include(m => m.Genres)
+                .ThenInclude(m => m.Genre)
                 .Include(m => m.Publisher)
                 .Where(m => m.PublisherId == publisherId)
                 .ToListAsync();
@@ -45,6 +47,7 @@ namespace GameRental.Data.Repositories
         {
             return await GameRentalDbContext.Games
                 .Include(m => m.Genres)
+                .ThenInclude(m => m.Genre)
                  .Include(m => m.Publisher)
                  .SingleOrDefaultAsync(m => m.Ref == id);
         }

@@ -11,5 +11,6 @@ namespace GameRental.Core.Services{
         Task<Game> CreateGame(Game game);
         Task UpdateGame(Game gameToUpdate, Game game);
         Task DeleteGame(Game game);
+        Task SetGameGenres(Game newGame, int[] genres);
     }
 }

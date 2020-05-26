@@ -7,6 +7,7 @@ namespace GameRental.Core
     {
         IGameRepository Games { get; }
         IPublisherRepository Publishers { get; }
+        IGameGenrePivotRepository GameGenrePivot { get; }
         Task<int> CommitAsync();
     }
 }

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "1DGti06VA+cJNyj1bo7kz/juCau+dkPAnJOdHm+Hl2HbsaXO6GBnsvIg1A6LQjy4Wo8bOX7gIP5dFAvQeEbX/A==",
+  "dgSpecHash": "j0GKAnsI/Iw2gw8sHL7Dwsd3YoiRpuxfe0MmJWdtNkLFkkBL6aLthSX7HRZLtI2od/3esr9dqpB6itiWw/5UVA==",
   "success": true,
   "projectFilePath": "/Users/simonvanderweelepersonal/src/dotnet/GameRental/server/GameRental.Api/GameRental.Api.csproj",
   "expectedPackageFiles": [
     "/Users/simonvanderweelepersonal/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/7.0.0/automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/simonvanderweelepersonal/.nuget/packages/fluentvalidation/8.6.2/fluentvalidation.8.6.2.nupkg.sha512",
+    "/Users/simonvanderweelepersonal/.nuget/packages/fluentvalidation.aspnetcore/8.6.2/fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "/Users/simonvanderweelepersonal/.nuget/packages/fluentvalidation.dependencyinjectionextensions/8.6.2/fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.4/microsoft.aspnetcore.jsonpatch.3.1.4.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/3.1.4/microsoft.aspnetcore.mvc.newtonsoftjson.3.1.4.nupkg.sha512",
     "/Users/simonvanderweelepersonal/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

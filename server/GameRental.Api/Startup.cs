@@ -1,4 +1,6 @@
 using AutoMapper;
+using FluentValidation.AspNetCore;
+using GameRental.Api.Validators;
 using GameRental.Core;
 using GameRental.Core.Services;
 using GameRental.Data;

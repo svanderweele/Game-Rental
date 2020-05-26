@@ -17,6 +17,10 @@ namespace GameRental.Data.Configurations
                 .WithMany(b => b.Genres)
                 .HasForeignKey(bc => bc.GameId);
 
+            // builder.HasOne(m => m.Genre)
+            //     .WithMany(m => m.Genres)
+            //     .HasForeignKey(m => m.GenreId);
+                
             builder
             .ToTable("GameGenresPivot");
         }

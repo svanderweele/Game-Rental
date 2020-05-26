@@ -4,14 +4,16 @@ using GameRental.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GameRental.Data.Migrations
 {
     [DbContext(typeof(GameRentalDbContext))]
-    partial class GameRentalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200526120509_AddedGameGenreRelationshipToGameGenrePivotTable")]
+    partial class AddedGameGenreRelationshipToGameGenrePivotTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,8 +47,7 @@ namespace GameRental.Data.Migrations
                     b.Property<int>("PublisherId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Ref")
-                        .IsRequired()
+                    b.Property<Guid>("Ref")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 

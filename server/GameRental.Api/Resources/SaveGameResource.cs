@@ -4,13 +4,15 @@ using GameRental.Core.Models;
 
 namespace GameRental.Api.Resources
 {
-    public class GameResource
+    public class SaveGameResource
     {
+
         public string Name { get; set; }
         public string Description { get; set; }
         public string CoverArtUrl { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public ICollection<GameGenrePivotResource> Genres { get; set; }
-        public PublisherResource Publisher { get; set; }
+        public int[] GenreIds { get; set; }
+
+        public int PublisherId { get; set; }
     }
 }

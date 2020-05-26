@@ -19,6 +19,7 @@ namespace GameRental.Services
         public async Task<Game> CreateGame(Game game)
         {
             await _unitOfWork.Games.AddAsync(game);
+            await _unitOfWork.CommitAsync();
             return game;
         }
 
@@ -38,6 +39,13 @@ namespace GameRental.Services
             return await _unitOfWork.Games.GetWithPublisherByRefAsync(reference);
         }
 
+        public async Task SetGameGenres(Game newGame, int[] genres)
+        {
+            var genrePivots = genres.Select(e => new GameGenrePivot { GameId = newGame.Id, GenreId = e });
+            await _unitOfWork.GameGenrePivot.AddRangeAsync(genrePivots);
+            await _unitOfWork.CommitAsync();
+        }
+
         public async Task UpdateGame(Game gameToUpdate, Game game)
         {
             gameToUpdate.Genres = game.Genres;
@@ -46,7 +54,7 @@ namespace GameRental.Services
             gameToUpdate.PublisherId = game.PublisherId;
             gameToUpdate.ReleaseDate = game.ReleaseDate;
             gameToUpdate.CoverArtUrl = game.CoverArtUrl;
-            
+
             await _unitOfWork.CommitAsync();
         }
     }
